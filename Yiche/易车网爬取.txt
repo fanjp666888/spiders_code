@@ -1,0 +1,4 @@
+爬取易车网:
+    获取全网各车型各规格车辆信息,采用Scrapy-MongoDB框架组件,设置随机User-Agent请求和延迟3秒请求,防止反爬措施 .
+    遇到的服务器反爬措施:网站车型数据对方通过JavaScript生成js,直接访问不到具体URL,分析网站js后得到接口:http://api.car.bitauto.com/CarInfo/getlefttreejson.ashx?tagtype=chexing&pagetype=masterbrand&objid=127
+通过切割数据最终得到车型信息和下一页的URL ,完成数据的爬取工作
